@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" href="cff.jpg" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Módulo I - TPROG | C++</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <img src="cecyteq.png" alt="Logo CECyTEQ" width="120">
+    <h1>Módulo I - Programación Estructurada en C++</h1>
+    <nav>
+      <button onclick="mostrar('inicio')">Inicio</button>
+      <button onclick="mostrar('submodulo1')">Submódulo 1</button>
+      <button onclick="mostrar('submodulo2')">Submódulo 2</button>
+      <button onclick="mostrar('submodulo3')">Submódulo 3</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="contenido">
+      <!-- Aquí se carga todo dinámicamente -->
+    </section>
+  </main>
+
+  <script>
+    function mostrar(seccion) {
+      const contenido = document.getElementById("contenido");
+
+      if (seccion === 'inicio') {
+        contenido.innerHTML = `
+          <h2>Bienvenido</h2>
+          <p>Este módulo te introduce en el mundo del desarrollo de software utilizando programación estructurada en C++.</p>
+          <p>La programación estructurada se basa en dividir el código en bloques lógicos que se ejecutan secuencialmente, facilitando su comprensión y mantenimiento. Es ideal para quienes se inician en el desarrollo de software.</p>
+          <p>A lo largo de este módulo, desarrollarás la capacidad de construir soluciones eficientes mediante algoritmos, aplicar estructuras de control y organizar información usando estructuras de datos.</p>
+          <center><img src="images.jpg" alt="Introducción a C++"></center>
+        `;
+      }
+
+      if (seccion === 'submodulo1') {
+        contenido.innerHTML = `
+          <h2>Submódulo 1: Construye algoritmos para la resolución de problemas</h2>
+          <p>Este submódulo se enfoca en el análisis lógico de problemas y la creación de algoritmos. Antes de escribir código, es esencial saber cómo resolver el problema paso a paso.</p>
+          <p>Aprenderás a identificar entradas, procesos y salidas, utilizando herramientas como pseudocódigo, diagramas de flujo y mapas conceptuales. Estas herramientas permiten una mejor visualización y planificación de la solución.</p>
+          <p>Además, se fomentará el pensamiento lógico y estructurado, lo que te preparará para traducir esos algoritmos en código real más adelante.</p>
+          <code>
+Inicio<br>
+&nbsp;&nbsp;Leer A, B<br>
+&nbsp;&nbsp;Sumar A + B → Resultado<br>
+&nbsp;&nbsp;Mostrar Resultado<br>
+Fin
+          </code>
+          <center><img src="esquema1.png" alt="Esquema de algoritmo"></center>
+        `;
+      }
+
+      if (seccion === 'submodulo2') {
+        contenido.innerHTML = `
+          <h2>Submódulo 2: Aplica estructuras de control con C++</h2>
+          <p>En este submódulo aprenderás a controlar el flujo de ejecución de tus programas. Esto incluye condicionales (<code>if</code>, <code>else</code>) y ciclos (<code>for</code>, <code>while</code>, <code>do-while</code>).</p>
+          <p>Estas estructuras permiten que tus programas tomen decisiones, repitan tareas o realicen diferentes acciones según las condiciones. Es una parte esencial para escribir programas dinámicos y funcionales.</p>
+          <p>Además, verás cómo usar operadores lógicos y relacionales para evaluar expresiones, y cómo combinar múltiples condiciones. Estas herramientas te ayudarán a resolver problemas más complejos con código más limpio.</p>
+          <code>
+#include &lt;iostream&gt;<br>
+using namespace std;<br><br>
+int main() {<br>
+&nbsp;&nbsp;int edad;<br>
+&nbsp;&nbsp;cout &lt;&lt; "Ingresa tu edad: ";<br>
+&nbsp;&nbsp;cin &gt;&gt; edad;<br><br>
+&nbsp;&nbsp;if (edad &gt;= 18) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Eres mayor de edad.";<br>
+&nbsp;&nbsp;} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Eres menor de edad.";<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;return 0;<br>
+}
+          </code>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/z97mT3GL9Ds?si=XzilccJt_F3XlOZA" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        `;
+      }
+
+      if (seccion === 'submodulo3') {
+        contenido.innerHTML = `
+          <h2>Submódulo 3: Aplica estructuras de datos con C++</h2>
+          <p>Una vez dominadas las estructuras de control, este submódulo te enseñará a organizar mejor la información usando arreglos, vectores y estructuras.</p>
+          <p>Las estructuras de datos son fundamentales para manejar grandes volúmenes de información de forma eficiente. Aprenderás a declarar, inicializar y recorrer arreglos, tanto unidimensionales como bidimensionales.</p>
+          <p>También verás cómo utilizar vectores, que son similares a los arreglos pero más flexibles, y estructuras (<code>struct</code>) para agrupar diferentes tipos de datos bajo un mismo nombre. Estos conceptos te preparan para programas más avanzados como bases de datos y juegos.</p>
+          <code>
+#include &lt;iostream&gt;<br>
+using namespace std;<br><br>
+int main() {<br>
+&nbsp;&nbsp;int numeros[5] = {10, 20, 30, 40, 50};<br>
+&nbsp;&nbsp;for (int i = 0; i &lt; 5; i++) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Elemento " &lt;&lt; i &lt;&lt; ": " &lt;&lt; numeros[i] &lt;&lt; endl;<br>
+&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;return 0;<br>
+}
+          </code>
+          <center><img src="ejemplo_simple.png" alt="Ejemplo con arreglos"></center>
+        `;
+      }
+    }
+
+    // Mostrar inicio por defecto al cargar
+    mostrar('inicio');
+  </script>
+</body>
+</html>
